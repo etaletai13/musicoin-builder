@@ -7,13 +7,12 @@
     "build": "./dist/bin/build.js",
     "run": "./dist/bin/run.js"
   },
-  "scripts": {
-    "postinstall": "yarn build",
-    "prepublish": "yarn build",
-    "test": "yarn build && ava",
-    "coverage": "nyc ava",
-    "build": "tsc",
-    "release": "yarn test && standard-version"
+   "scripts": {
+    "build": "yarn prepare"
+    "prepare": "yarn tsc",
+    "test": "yarn ava",
+    "coverage": "yarn nyc ava",
+    "release": "yarn test && yarn standard-version"
   },
   "repository": {
     "type": "git",
@@ -26,7 +25,7 @@
   },
   "homepage": "https://github.com/etaletai13/nwjs-builder-phoenix#readme",
   "devDependencies": {
-    "@types/bluebird": "^3.5.3",
+    "@types/bluebird": "3.5.3",
     "@types/debug": "0.0.29",
     "@types/es6-shim": "^0.31.32",
     "@types/fs-extra": "^3.0.0",
@@ -46,21 +45,21 @@
     "typescript": "~2.9.1"
   },
   "dependencies": {
-    "debug": "^2.6.1",
-    "dir-compare": "^1.3.0",
-    "globby": "^6.1.0",
-    "plist": "^3.0.1",
-    "progress": "^1.1.8",
-    "rcedit": "^0.8.0",
-    "request-progress": "^3.0.0",
-    "semver": "^5.3.0",
-    "source-map-support": "^0.4.11",
-    "tmp": "0.0.31",
+    "debug": "~2.6.1",
+    "dir-compare": "~1.3.0",
+    "globby": "~6.1.0",
+    "plist": "~3.0.1",
+    "progress": "~1.1.8",
+    "rcedit": "~0.8.0",
+    "request-progress": "~3.0.0",
+    "semver": "~5.3.0",
+    "source-map-support": "~0.4.11",
+    "tmp": "~0.0.31",
     "typescript": "~2.9.1",
-    "yargs": "^7.0.1"
+    "yargs": "~7.0.1"
   },
   "engines": {
     "node": "^8.0.0",
-    "yarn": ">=1.7.0"
+    "yarn": "^1.7.0"
   }
 }
