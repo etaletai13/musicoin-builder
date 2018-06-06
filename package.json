@@ -8,6 +8,7 @@
     "run": "./dist/bin/run.js"
   },
   "scripts": {
+    "postinstall": "yarn build",
     "prepublish": "yarn build",
     "test": "yarn build && ava",
     "coverage": "nyc ava",
