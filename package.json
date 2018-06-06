@@ -8,7 +8,7 @@
     "run": "./dist/bin/run.js"
   },
    "scripts": {
-    "build": "yarn prepare"
+    "build": "yarn prepare",
     "prepare": "yarn tsc",
     "test": "yarn ava",
     "coverage": "yarn nyc ava",
